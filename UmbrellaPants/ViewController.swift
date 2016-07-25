@@ -122,7 +122,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         if self.temperature >= 66 {
                             self.firstImageView.image = UIImage(named:"shirt")
                             self.secondImageView.image = UIImage(named:"shorts")
-                        } else if self.temperature < 70 { // colder
+                        } else if self.temperature < 66 { // colder
                             self.firstImageView.image = UIImage(named:"jacket")
                             self.secondImageView.image = UIImage(named:"pants")
                         }
