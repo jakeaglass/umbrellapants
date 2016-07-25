@@ -1,14 +1,15 @@
 # UmbrellaPants: A Stupidly Simple Weather App
 
-![](screenshot0.png)
+<img src="screenshot0.png" width="250" />
 
 ##How does it work?
 If you move more than a km or whenever you open the app, UmbrellaPants updates your weather forecast. Here are the cases:
 
-*Raining*: 
+####Raining: 
  - if (temperature<=70°F) {umbrella+pants}
  - if (temperature>70°F) {umbrella+shorts}
-*Not Raining*
+
+####Not Raining:
  - if (temperature<66°F) {jacket+pants}
  - if (temperature>=66°F) {shirt+shorts} 
 
