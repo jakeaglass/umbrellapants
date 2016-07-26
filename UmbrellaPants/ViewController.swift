@@ -37,13 +37,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.view.addSubview(stackView)
         self.view.addSubview(commentLabel)
         
-        stackView.distribution = .FillProportionally
+        stackView.distribution = .EqualCentering
         stackView.alignment = .Center
         stackView.axis = .Vertical
         
         self.view.layoutMargins = UIEdgeInsets(top:20,left:20,bottom:20,right:20)
-        stackView.heightAnchor.constraintEqualToConstant(UIWindow().bounds.size.height-140.0).active = true
-        stackView.widthAnchor.constraintEqualToConstant(UIWindow().bounds.size.width-40.0).active = true
+        stackView.heightAnchor.constraintEqualToAnchor(self.view.heightAnchor,constant:-130.0).active = true
+        stackView.widthAnchor.constraintEqualToAnchor(self.view.widthAnchor,constant:-40.0).active = true
         stackView.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 20.0).active = true
         stackView.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: 70.0).active = true
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -93,47 +93,54 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let task = NSURLSession.sharedSession().dataTaskWithURL(weatherUrl!){ (data, response, error) in
             SwiftSpinner.hide({() in
                 if let error = error {
-                    print("error: \(error.localizedDescription)")
+                    let error = UIAlertController(title: "Whoops", message: "Failed to get the weather with error \(error.localizedDescription) Are you connected to the Internet?", preferredStyle: .Alert)
+                    error.addAction(UIAlertAction(title: "Okay", style: .Cancel, handler: nil))
+                    self.presentViewController(error, animated: true, completion: nil)
+
                 } else if let data = data { //success
                     do {
                         let dict = try NSJSONSerialization.JSONObjectWithData(data, options: [])
                         self.temperature = Int((dict.objectForKey("currentobservation") as! NSDictionary).objectForKey("Temp") as! String)!
                         self.weather = (dict.objectForKey("currentobservation") as! NSDictionary).objectForKey("Weather") as! String
+                        
+                        //set the temperature indicator label
+                        self.commentLabel.text = String(self.temperature!)+"°F"
+                        
+                        //determine the appropriate images
+                        switch self.weather! {
+                        case "Rain":
+                            self.firstImageView.image = UIImage(named:"shirt")
+                            if self.temperature > 70 { // shorts
+                                self.secondImageView.image = UIImage(named:"shorts")
+                            } else if self.temperature <= 70 { // pants
+                                self.secondImageView.image = UIImage(named:"pants")
+                            }
+                            break
+                        default:
+                            //tshirt weather!
+                            if self.temperature >= 66 {
+                                self.firstImageView.image = UIImage(named:"shirt")
+                                self.secondImageView.image = UIImage(named:"shorts")
+                            } else if self.temperature < 66 { // colder
+                                self.firstImageView.image = UIImage(named:"jacket")
+                                self.secondImageView.image = UIImage(named:"pants")
+                            }
+                            break
+                        }
+                        
+                        //size the images
+                        self.firstImageView.widthAnchor.constraintEqualToConstant(256.0).active = true
+                        self.firstImageView.heightAnchor.constraintEqualToConstant(256.0).active = true
+                        self.secondImageView.widthAnchor.constraintEqualToConstant(256.0).active = true
+                        self.secondImageView.heightAnchor.constraintEqualToConstant(256.0).active = true
+
 
                     } catch {
-                        print("error serializing json \(error)")
+                        let error = UIAlertController(title: "Whoops", message: "Failed to get the weather with error \(error) Maybe you're not on Earth? ", preferredStyle: .Alert)
+                        error.addAction(UIAlertAction(title: "Okay", style: .Cancel, handler: nil))
+                        self.presentViewController(error, animated: true, completion: nil)
                     }
                     
-                    //set the temperature indicator label
-                    self.commentLabel.text = String(self.temperature!)+"°F"
-                    
-                    //determine the appropriate images
-                    switch self.weather! {
-                    case "Rain":
-                        self.firstImageView.image = UIImage(named:"shirt")
-                        if self.temperature > 70 { // shorts
-                            self.secondImageView.image = UIImage(named:"shorts")
-                        } else if self.temperature <= 70 { // pants
-                            self.secondImageView.image = UIImage(named:"pants")
-                        }
-                        break
-                    default:
-                        //tshirt weather!
-                        if self.temperature >= 66 {
-                            self.firstImageView.image = UIImage(named:"shirt")
-                            self.secondImageView.image = UIImage(named:"shorts")
-                        } else if self.temperature < 66 { // colder
-                            self.firstImageView.image = UIImage(named:"jacket")
-                            self.secondImageView.image = UIImage(named:"pants")
-                        }
-                        break
-                    }
-                    
-                    //size the images
-                    self.firstImageView.widthAnchor.constraintEqualToConstant(256.0).active = true
-                    self.firstImageView.heightAnchor.constraintEqualToConstant(256.0).active = true
-                    self.secondImageView.widthAnchor.constraintEqualToConstant(256.0).active = true
-                    self.secondImageView.heightAnchor.constraintEqualToConstant(256.0).active = true
                 }
             })
         }
