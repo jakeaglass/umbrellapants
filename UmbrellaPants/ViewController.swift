@@ -108,7 +108,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         
                         //determine the appropriate images
                         if self.weather?.lowercaseString.rangeOfString("rain") != nil {
-                            self.firstImageView.image = UIImage(named:"shirt")
+                            self.firstImageView.image = UIImage(named:"umbrella")
                             if self.temperature > 70 { // shorts
                                 self.secondImageView.image = UIImage(named:"shorts")
                             } else if self.temperature <= 70 { // pants
