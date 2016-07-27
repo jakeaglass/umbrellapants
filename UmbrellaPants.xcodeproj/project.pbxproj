@@ -12,27 +12,8 @@
 		D7B3995E1D4690A5009BB277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B3995C1D4690A5009BB277 /* Main.storyboard */; };
 		D7B399601D4690A5009BB277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7B3995F1D4690A5009BB277 /* Assets.xcassets */; };
 		D7B399631D4690A5009BB277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B399611D4690A5009BB277 /* LaunchScreen.storyboard */; };
-		D7B3996E1D4690A5009BB277 /* UmbrellaPantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B3996D1D4690A5009BB277 /* UmbrellaPantsTests.swift */; };
-		D7B399791D4690A5009BB277 /* UmbrellaPantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B399781D4690A5009BB277 /* UmbrellaPantsUITests.swift */; };
 		D7B399871D4697B6009BB277 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B399861D4697B6009BB277 /* SwiftSpinner.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D7B3996A1D4690A5009BB277 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7B3994D1D4690A5009BB277 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7B399541D4690A5009BB277;
-			remoteInfo = UmbrellaPants;
-		};
-		D7B399751D4690A5009BB277 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7B3994D1D4690A5009BB277 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7B399541D4690A5009BB277;
-			remoteInfo = UmbrellaPants;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D7B399551D4690A5009BB277 /* UmbrellaPants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmbrellaPants.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,31 +23,11 @@
 		D7B3995F1D4690A5009BB277 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7B399621D4690A5009BB277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7B399641D4690A5009BB277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7B399691D4690A5009BB277 /* UmbrellaPantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbrellaPantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7B3996D1D4690A5009BB277 /* UmbrellaPantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaPantsTests.swift; sourceTree = "<group>"; };
-		D7B3996F1D4690A5009BB277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7B399741D4690A5009BB277 /* UmbrellaPantsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UmbrellaPantsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7B399781D4690A5009BB277 /* UmbrellaPantsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaPantsUITests.swift; sourceTree = "<group>"; };
-		D7B3997A1D4690A5009BB277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7B399861D4697B6009BB277 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D7B399521D4690A5009BB277 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7B399661D4690A5009BB277 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7B399711D4690A5009BB277 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,8 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				D7B399571D4690A5009BB277 /* UmbrellaPants */,
-				D7B3996C1D4690A5009BB277 /* UmbrellaPantsTests */,
-				D7B399771D4690A5009BB277 /* UmbrellaPantsUITests */,
 				D7B399561D4690A5009BB277 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				D7B399551D4690A5009BB277 /* UmbrellaPants.app */,
-				D7B399691D4690A5009BB277 /* UmbrellaPantsTests.xctest */,
-				D7B399741D4690A5009BB277 /* UmbrellaPantsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,24 +65,6 @@
 				D7B399641D4690A5009BB277 /* Info.plist */,
 			);
 			path = UmbrellaPants;
-			sourceTree = "<group>";
-		};
-		D7B3996C1D4690A5009BB277 /* UmbrellaPantsTests */ = {
-			isa = PBXGroup;
-			children = (
-				D7B3996D1D4690A5009BB277 /* UmbrellaPantsTests.swift */,
-				D7B3996F1D4690A5009BB277 /* Info.plist */,
-			);
-			path = UmbrellaPantsTests;
-			sourceTree = "<group>";
-		};
-		D7B399771D4690A5009BB277 /* UmbrellaPantsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D7B399781D4690A5009BB277 /* UmbrellaPantsUITests.swift */,
-				D7B3997A1D4690A5009BB277 /* Info.plist */,
-			);
-			path = UmbrellaPantsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,42 +87,6 @@
 			productReference = D7B399551D4690A5009BB277 /* UmbrellaPants.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D7B399681D4690A5009BB277 /* UmbrellaPantsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7B399801D4690A5009BB277 /* Build configuration list for PBXNativeTarget "UmbrellaPantsTests" */;
-			buildPhases = (
-				D7B399651D4690A5009BB277 /* Sources */,
-				D7B399661D4690A5009BB277 /* Frameworks */,
-				D7B399671D4690A5009BB277 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7B3996B1D4690A5009BB277 /* PBXTargetDependency */,
-			);
-			name = UmbrellaPantsTests;
-			productName = UmbrellaPantsTests;
-			productReference = D7B399691D4690A5009BB277 /* UmbrellaPantsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D7B399731D4690A5009BB277 /* UmbrellaPantsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7B399831D4690A5009BB277 /* Build configuration list for PBXNativeTarget "UmbrellaPantsUITests" */;
-			buildPhases = (
-				D7B399701D4690A5009BB277 /* Sources */,
-				D7B399711D4690A5009BB277 /* Frameworks */,
-				D7B399721D4690A5009BB277 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7B399761D4690A5009BB277 /* PBXTargetDependency */,
-			);
-			name = UmbrellaPantsUITests;
-			productName = UmbrellaPantsUITests;
-			productReference = D7B399741D4690A5009BB277 /* UmbrellaPantsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,15 +99,9 @@
 				TargetAttributes = {
 					D7B399541D4690A5009BB277 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4P3Y2PXZLG;
-					};
-					D7B399681D4690A5009BB277 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = D7B399541D4690A5009BB277;
-					};
-					D7B399731D4690A5009BB277 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = D7B399541D4690A5009BB277;
+						DevelopmentTeam = 8QDQ246B94;
+						DevelopmentTeamName = "Tristan Seifert";
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -222,8 +119,6 @@
 			projectRoot = "";
 			targets = (
 				D7B399541D4690A5009BB277 /* UmbrellaPants */,
-				D7B399681D4690A5009BB277 /* UmbrellaPantsTests */,
-				D7B399731D4690A5009BB277 /* UmbrellaPantsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,20 +131,6 @@
 				D7B399631D4690A5009BB277 /* LaunchScreen.storyboard in Resources */,
 				D7B399601D4690A5009BB277 /* Assets.xcassets in Resources */,
 				D7B3995E1D4690A5009BB277 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7B399671D4690A5009BB277 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7B399721D4690A5009BB277 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,36 +147,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7B399651D4690A5009BB277 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D7B3996E1D4690A5009BB277 /* UmbrellaPantsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7B399701D4690A5009BB277 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D7B399791D4690A5009BB277 /* UmbrellaPantsUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D7B3996B1D4690A5009BB277 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7B399541D4690A5009BB277 /* UmbrellaPants */;
-			targetProxy = D7B3996A1D4690A5009BB277 /* PBXContainerItemProxy */;
-		};
-		D7B399761D4690A5009BB277 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7B399541D4690A5009BB277 /* UmbrellaPants */;
-			targetProxy = D7B399751D4690A5009BB277 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D7B3995C1D4690A5009BB277 /* Main.storyboard */ = {
@@ -412,6 +264,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.squee.UmbrellaPants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -428,53 +281,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.squee.UmbrellaPants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D7B399811D4690A5009BB277 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = UmbrellaPantsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.squee.UmbrellaPantsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UmbrellaPants.app/UmbrellaPants";
-			};
-			name = Debug;
-		};
-		D7B399821D4690A5009BB277 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = UmbrellaPantsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.squee.UmbrellaPantsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UmbrellaPants.app/UmbrellaPants";
-			};
-			name = Release;
-		};
-		D7B399841D4690A5009BB277 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = UmbrellaPantsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.squee.UmbrellaPantsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = UmbrellaPants;
-			};
-			name = Debug;
-		};
-		D7B399851D4690A5009BB277 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = UmbrellaPantsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.squee.UmbrellaPantsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = UmbrellaPants;
 			};
 			name = Release;
 		};
@@ -495,24 +303,6 @@
 			buildConfigurations = (
 				D7B3997E1D4690A5009BB277 /* Debug */,
 				D7B3997F1D4690A5009BB277 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D7B399801D4690A5009BB277 /* Build configuration list for PBXNativeTarget "UmbrellaPantsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7B399811D4690A5009BB277 /* Debug */,
-				D7B399821D4690A5009BB277 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D7B399831D4690A5009BB277 /* Build configuration list for PBXNativeTarget "UmbrellaPantsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7B399841D4690A5009BB277 /* Debug */,
-				D7B399851D4690A5009BB277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
