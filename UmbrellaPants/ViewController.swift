@@ -101,23 +101,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     do {
                         let dict = try NSJSONSerialization.JSONObjectWithData(data, options: [])
                         self.temperature = Int((dict.objectForKey("currentobservation") as! NSDictionary).objectForKey("Temp") as! String)!
-                        self.weather = (dict.objectForKey("currentobservation") as! NSDictionary).objectForKey("Weather") as! String
+                        self.weather = (dict.objectForKey("currentobservation") as! NSDictionary).objectForKey("Weather") as? String
                         
                         //set the temperature indicator label
                         self.commentLabel.text = String(self.temperature!)+"°F"
                         
                         //determine the appropriate images
-                        switch self.weather! {
-                        case "Rain":
+                        if self.weather?.lowercaseString.rangeOfString("rain") != nil {
                             self.firstImageView.image = UIImage(named:"shirt")
                             if self.temperature > 70 { // shorts
                                 self.secondImageView.image = UIImage(named:"shorts")
                             } else if self.temperature <= 70 { // pants
                                 self.secondImageView.image = UIImage(named:"pants")
                             }
-                            break
-                        default:
-                            //tshirt weather!
+                        } else {
+                            //tshirt weather! (well, just not rain)
                             if self.temperature >= 66 {
                                 self.firstImageView.image = UIImage(named:"shirt")
                                 self.secondImageView.image = UIImage(named:"shorts")
@@ -125,7 +123,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                                 self.firstImageView.image = UIImage(named:"jacket")
                                 self.secondImageView.image = UIImage(named:"pants")
                             }
-                            break
                         }
                         
                         //size the images
